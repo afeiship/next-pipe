@@ -1,3 +1,11 @@
+/*!
+ * name: @feizheng/next-pipe
+ * url: https://github.com/afeiship/next-pipe
+ * version: 1.0.0
+ * date: 2019-11-30T12:12:56.401Z
+ * license: MIT
+ */
+
 (function() {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
@@ -15,3 +23,5 @@
     module.exports = nx.pipe;
   }
 })();
+
+//# sourceMappingURL=next-pipe.js.map
