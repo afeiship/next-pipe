@@ -5,7 +5,8 @@
   var DEFAULT_PIPE = { fn: RETURN_VALUE, args: [] };
 
   nx.pipe = function(inValue, inItems) {
-    var items = inItems || DEFAULT_PIPE;
+    var has = inItems && inItems.length > 0;
+    var items = has ? inItems : [DEFAULT_PIPE];
     return items.reduce(function(item1, item2) {
       return item2.fn(item1, item2.args);
     }, inValue);
