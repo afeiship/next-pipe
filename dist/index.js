@@ -3,7 +3,7 @@
  * description: Pipe for next.
  * homepage: https://github.com/afeiship/next-pipe
  * version: 1.0.0
- * date: 2020-11-22 19:56:25
+ * date: 2020-11-22 19:57:06
  * license: MIT
  */
 
