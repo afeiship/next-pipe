@@ -1,22 +1,15 @@
 (function () {
   require('../src');
-
-  var addMore = require('./pipes/add-more');
-  var addZero = require('./pipes/add-zero');
+  const addOne = (n) => n + 1;
+  const double = (n) => n * 2;
+  const sqrt = (n) => n * n;
 
   describe('api.basic test', () => {
-    test('nx.pipe single pipe', function () {
-      var pipe1 = { fn: addMore, args: [111, 999] };
-      var res = nx.pipe('aaa', [pipe1]);
-      expect(res).toBe('111aaa999');
-    });
-
     test('nx.pipe multiple pipe', function () {
-      var pipe1 = { fn: addMore, args: [111, 999] };
-      var pipe2 = { fn: addZero };
-      var res = nx.pipe('aaa', [pipe1, pipe2]);
-      expect(res).toBe('0111aaa9990');
+      const pipeFn1 = nx.pipe(addOne, double, sqrt);
+      const pipeFn2 = nx.pipe(double, sqrt, addOne);
+      expect(pipeFn1(10)).toBe(484);
+      expect(pipeFn2(10)).toBe(401);
     });
   });
-
 })();
