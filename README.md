@@ -15,13 +15,11 @@ npm install -S @jswork/next-pipe
 ```js
 import '@jswork/next-pipe';
 
-const addMore = require('./pipes/add-more');
-const addZero = require('./pipes/add-zero');
+const addOne = (n) => n + 1;
+const double = (n) => n * 2;
+const sqrt = (n) => n * n;
 
-const pipe1 = { fn: addMore, args: [111, 999] };
-const pipe2 = { fn: addZero };
-
-nx.pipe('aaa', [pipe1, pipe2]);   // '0111aaa9990'
+const res = nx.pipe(addOne, double, sqrt)(2); // 36
 ```
 
 ## license
