@@ -2,7 +2,7 @@
   "name": "@jswork/next-pipe",
   "version": "1.1.0",
   "description": "Pipe for next.",
-  "homepage": "https://github.com/afeiship/next-pipe",
+  "homepage": "https://js.work",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
@@ -42,5 +42,9 @@
     "pipe",
     "filter",
     "compose"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afeiship/next-pipe.git"
+  }
 }
